@@ -1,0 +1,4 @@
+# never commit raw audit bundles or large stores
+*.tar.gz
+04-evidence/snapshots/**/_inspect.json
+*.sqlite3
