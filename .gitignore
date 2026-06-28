@@ -2,3 +2,7 @@
 *.tar.gz
 04-evidence/snapshots/**/_inspect.json
 *.sqlite3
+
+# python bytecode cache
+__pycache__/
+*.pyc
