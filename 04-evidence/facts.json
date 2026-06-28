@@ -1,0 +1,107 @@
+{
+  "snapshot_utc": "2026-06-28T23:37:15Z",
+  "host": "cakidd-Legion-5-16IRX9",
+  "generator": "collect_evidence.py",
+  "containers": {
+    "running": 158,
+    "published_bindings": 116,
+    "internal_only": 62,
+    "distinct_host_ports": 115,
+    "collisions": 0,
+    "nonloopback": [
+      {
+        "container": "jarvis-blood-brain-barrier",
+        "binding": "0.0.0.0:8016",
+        "container_port": "8016",
+        "proto": "tcp"
+      }
+    ],
+    "status": "ok"
+  },
+  "ollama": {
+    "models": 37,
+    "status": "ok"
+  },
+  "chroma": {
+    "live": {
+      "collections": 3,
+      "vectors": 204,
+      "store_path": null,
+      "status": "ok"
+    },
+    "backup": {
+      "path": "/mnt/nvme1/msjarvis-data/chroma-live-bk-20260623-0834/chroma.sqlite3",
+      "size_bytes": 103582765056,
+      "collections": 125,
+      "vectors": 16871654,
+      "vectors_verified_at": "2026-06-28T23:37:15Z",
+      "migrations": {
+        "embeddings_queue": 2,
+        "metadb": 6,
+        "sysdb": 10
+      },
+      "status": "ok"
+    }
+  },
+  "postgres": {
+    "instances": [
+      {
+        "endpoint": "host:5432",
+        "status": "ok",
+        "databases": [
+          {
+            "name": "gisdb",
+            "size": "13 GB"
+          },
+          {
+            "name": "msjarvis",
+            "size": "9606 MB"
+          },
+          {
+            "name": "msjarvisgis",
+            "size": "1214 MB"
+          }
+        ],
+        "largest_db": "gisdb"
+      },
+      {
+        "endpoint": "host:5433",
+        "status": "ok",
+        "databases": [
+          {
+            "name": "msjarvisgis",
+            "size": "95 GB"
+          },
+          {
+            "name": "msjarvis",
+            "size": "1587 MB"
+          }
+        ],
+        "largest_db": "msjarvisgis",
+        "spatial_body": true,
+        "schemas": 7,
+        "tables": 725,
+        "sample_rows": {
+          "wv_tax_parcels_2025": 1389855,
+          "buildings": 2121130
+        }
+      },
+      {
+        "endpoint": "container:jarvis-local-resources-db (host 5435)",
+        "status": "ok",
+        "databases": [
+          {
+            "name": "msjarvisgis",
+            "size": "16 MB"
+          }
+        ]
+      }
+    ]
+  },
+  "firewall": {
+    "ufw": "inactive"
+  },
+  "public": {
+    "root_http": "200"
+  }
+}

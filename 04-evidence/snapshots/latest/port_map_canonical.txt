@@ -1,35 +1,3 @@
-# Port Map
-
-> **GENERATED FILE — do not hand-edit.** Rendered from `../04-evidence/facts.json` (snapshot `2026-06-28T23:37:15Z`). To update, re-run the evidence pipeline:
-> `PGPASSWORD=… ./04-evidence/scripts/update_evidence.sh` (add `--full` to recount the backup corpus).
-
-
-Complete published port surface of the live container fleet, verified read-only.
-
-| Metric | Value |
-|---|---|
-| Running containers | 158 |
-| Published bindings | 116 |
-| Internal-only ports | 62 |
-| Distinct host ports | 115 |
-| Host-port collisions | 0 |
-| Non-loopback bindings | 1 |
-| Firewall (ufw) | inactive |
-| Public URL / (HTTP) | 200 |
-
-## Non-loopback bindings (network-reachable surface)
-
-| Container | Binding | Proto |
-|---|---|---|
-| jarvis-blood-brain-barrier | `0.0.0.0:8016` | tcp |
-
-> **ufw is inactive** — the bindings above are reachable on the local network. Public internet exposure is mediated by the Cloudflare tunnel; host database/service ports are not tunneled (LAN-scoped).
-
-## Full canonical port map
-
-<details><summary>All published ports (container_port → host_ip:host_port)</summary>
-
-```
 3306/tcp         -> 127.0.0.1:3307     mysql
 4002/tcp         -> 127.0.0.1:4002     jarvis-fifth-dgm
 5001/tcp         -> 127.0.0.1:5001     ipfs
@@ -146,8 +114,3 @@ Complete published port surface of the live container fleet, verified read-only.
 8081/tcp         -> 127.0.0.1:18091    jarvis-hilbert-gateway
 8081/tcp         -> 127.0.0.1:18092    jarvis-hilbert-state
 8092/tcp         -> 127.0.0.1:18093    jarvis-hilbert-time
-```
-</details>
-
----
-*Source: `../04-evidence/facts.json` and `../04-evidence/snapshots/latest/`. Regenerate; do not edit by hand.*
