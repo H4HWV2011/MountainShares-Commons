@@ -46,7 +46,29 @@ founder interests cannot bleed into one another. Full mechanics are in
 |---|---|---|---|
 | **Harmony for Hope, Inc.** | 501(c)(3) public charity (verified) | Charitable anchor; program sponsor and legal operator; treasury fiduciary | Operates under IRS nonprofit rules; cannot be a path to founder equity; **is not the money transmitter** |
 | **MountainShares Commons / DUNA** | Decentralized Unincorporated Nonprofit Association | Community ledger, EMS/M$ system, DAO governance; **money-services licensee of record** | Holds the WV Money Transmitter License, FinCEN MSB registration, surety bond, and BSA/AML program; community EMS confers no equity or ownership |
-| **Kidd's Technical Services (KTS)** | To-be-formed WV LLC | Founder commercial engine; holder of the Ms. Allis / ALLIS platform IP | **Not yet formed; no EIN.** Present KTS obligations and rights are held by Carrie Ann Kidd personally under that trade name until the LLC is formed |
+| **Kidd's Technical Services (KTS)** | WV single-member LLC — **EIN assigned, state formation pending** | Founder commercial engine; holder of the Ms. Allis / ALLIS platform IP | Federal **EIN 42-3329393** assigned June 23, 2026; sole member Carrie A. Kidd. The WV Secretary of State Certificate of Organization is **pending**; until it issues, KTS is EIN-assigned but not a completed WV LLC |
+
+## Kidd's Technical Services (KTS) — verified
+
+| Field | Value | Source |
+|---|---|---|
+| Legal name | KIDDS TECHNICAL SERVICES | IRS CP575G |
+| EIN | **42-3329393** (assigned June 23, 2026) | IRS CP575G |
+| Legal structure | Single-Member Limited Liability Company | IRS EIN assignment |
+| Sole member / responsible party | Carrie A. Kidd | IRS CP575G |
+| County / state | Fayette County, WV | IRS EIN assignment |
+| Address of record | 706 Main Street, Mount Hope, WV 25880 | IRS CP575G |
+| Principal activity | Service — geospatial | IRS EIN assignment |
+| Operating under trade name since | June 2024 | IRS EIN assignment (LLC start date) |
+| **WV Secretary of State formation** | **Certificate of Organization pending** | — |
+
+KTS has operated under the trade name since June 2024 and now holds a federal EIN, but
+the WV LLC is **not legally formed until the Secretary of State Certificate of
+Organization is filed and accepted.** Until then, KTS is accurately described as
+**EIN-assigned, WV formation pending** — not "unformed," and not "formed." The
+publishable EIN notice (CP575G) is in
+[`../04-evidence/primary-sources/`](../04-evidence/primary-sources/); the EIN-application
+summary is held privately because it contains personally identifying information.
 
 ## Reconciling the 990-N filing scale
 
@@ -58,8 +80,9 @@ the MountainShares program materials, because those flows do **not** run through
 - The **fee revenue, treasury reserves, and cash-out rails** sit with the
   **MountainShares DAO/DUNA** as money-services licensee of record, not with H4H.
 - The **founder capital contribution** (documented senior technical work) is a **KTS-side**
-  instrument, recorded outside H4H charitable assets and outside community EMS, and does
-  not activate until KTS is formed.
+  instrument, recorded outside H4H charitable assets and outside community EMS. KTS now
+  holds a federal EIN; founder-side instruments are executable subject to any separate
+  documents counsel requires, and to WV LLC formation completing.
 
 In short: H4H's 990-N reflects a small charitable nonprofit; the money-services and
 founder-side economics live in separate boxes by deliberate legal-structural design.
@@ -68,9 +91,10 @@ charitable, community, and founder layers from contaminating one another.
 
 ## Status and open items (stated plainly)
 
-- **KTS LLC formation** is the gating step before any founder equity, ALLIS IP holding,
-  or KTS-side capitalization instrument takes legal effect. Until then, KTS = Carrie Ann
-  Kidd personally.
+- **KTS** holds federal **EIN 42-3329393** (single-member LLC, assigned June 23, 2026); the
+  **WV Secretary of State Certificate of Organization is pending.** Founder-side IP
+  assignment and capital instruments are executable subject to any separate documents
+  counsel requires and to state formation completing.
 - **DUNA money-services licensing** is contingent on counsel confirming that a license is
   required and that the WV Division of Financial Institutions will license the DUNA
   directly; otherwise a DUNA-controlled licensed entity substitutes.

@@ -8,3 +8,6 @@ Authoritative source documents that legal and funder claims cite directly.
   determination letter, dated and effective 2017-03-21.
 
 These are immutable. Do not edit; they are the record of record.
+- `CP_575_G.pdf` — IRS Notice CP575G assigning EIN 42-3329393 to Kidds Technical
+  Services (single-member WV LLC, sole member Carrie A. Kidd), dated 2026-06-23.
+  SSN-free. The EIN-application summary is held privately and is NOT in this repo.
