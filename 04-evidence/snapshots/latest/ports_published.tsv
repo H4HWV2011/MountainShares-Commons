@@ -12,7 +12,8 @@ jarvis-ms-coordinator	127.0.0.1	7300	7300	tcp
 neo4j	127.0.0.1	7475	7474	tcp
 neo4j	127.0.0.1	7687	7687	tcp
 jarvis-unified-gateway	127.0.0.1	8001	8001	tcp
-125f2e53d146_jarvis-chroma	127.0.0.1	8002	8000	tcp
+jarvis-chroma	127.0.0.1	8002	8000	tcp
+jarvis-rag-server	127.0.0.1	8003	8003	tcp
 jarvis-gis-rag	127.0.0.1	8004	8004	tcp
 jarvis-spiritual-rag	127.0.0.1	8005	8005	tcp
 jarvis-local-resources	127.0.0.1	8006	8006	tcp
@@ -22,8 +23,7 @@ jarvis-wv-entangled-gateway	127.0.0.1	8010	8010	tcp
 jarvis-hippocampus	127.0.0.1	8011	8011	tcp
 jarvis-steward	127.0.0.1	8014	8014	tcp
 jarvis-nbb-i-containers-2	127.0.0.1	8015	8015	tcp
-jarvis-blood-brain-barrier	0.0.0.0	8016	8016	tcp
-jarvis-blood-brain-barrier	::	8016	8016	tcp
+jarvis-blood-brain-barrier	127.0.0.1	8016	8016	tcp
 jarvis-psychology-services	127.0.0.1	8019	8019	tcp
 jarvis-consciousness-bridge	127.0.0.1	8020	8020	tcp
 jarvis-toroidal	127.0.0.1	8025	8025	tcp

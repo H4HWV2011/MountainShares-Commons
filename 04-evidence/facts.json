@@ -1,21 +1,14 @@
 {
-  "snapshot_utc": "2026-06-28T23:37:15Z",
+  "snapshot_utc": "2026-06-29T03:40:57Z",
   "host": "cakidd-Legion-5-16IRX9",
   "generator": "collect_evidence.py",
   "containers": {
     "running": 158,
     "published_bindings": 116,
-    "internal_only": 62,
-    "distinct_host_ports": 115,
+    "internal_only": 61,
+    "distinct_host_ports": 116,
     "collisions": 0,
-    "nonloopback": [
-      {
-        "container": "jarvis-blood-brain-barrier",
-        "binding": "0.0.0.0:8016",
-        "container_port": "8016",
-        "proto": "tcp"
-      }
-    ],
+    "nonloopback": [],
     "status": "ok"
   },
   "ollama": {
@@ -24,17 +17,17 @@
   },
   "chroma": {
     "live": {
-      "collections": 3,
-      "vectors": 204,
-      "store_path": null,
+      "collections": 125,
+      "vectors": 16871675,
+      "store_path": "/mnt/nvme1/msjarvis-data/chroma-live-bk-20260623-0834",
       "status": "ok"
     },
     "backup": {
       "path": "/mnt/nvme1/msjarvis-data/chroma-live-bk-20260623-0834/chroma.sqlite3",
       "size_bytes": 103582765056,
       "collections": 125,
-      "vectors": 16871654,
-      "vectors_verified_at": "2026-06-28T23:37:15Z",
+      "vectors": 16871675,
+      "vectors_verified_at": "2026-06-29T03:40:57Z",
       "migrations": {
         "embeddings_queue": 2,
         "metadb": 6,
@@ -60,6 +53,10 @@
           {
             "name": "msjarvisgis",
             "size": "1214 MB"
+          },
+          {
+            "name": "local_resources",
+            "size": "7425 kB"
           }
         ],
         "largest_db": "gisdb"
@@ -99,7 +96,7 @@
     ]
   },
   "firewall": {
-    "ufw": "inactive"
+    "ufw": "active"
   },
   "public": {
     "root_http": "200"

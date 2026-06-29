@@ -1,6 +1,6 @@
 # Port Map
 
-> **GENERATED FILE — do not hand-edit.** Rendered from `../04-evidence/facts.json` (snapshot `2026-06-28T23:37:15Z`). To update, re-run the evidence pipeline:
+> **GENERATED FILE — do not hand-edit.** Rendered from `../04-evidence/facts.json` (snapshot `2026-06-29T03:40:57Z`). To update, re-run the evidence pipeline:
 > `PGPASSWORD=… ./04-evidence/scripts/update_evidence.sh` (add `--full` to recount the backup corpus).
 
 
@@ -10,20 +10,16 @@ Complete published port surface of the live container fleet, verified read-only.
 |---|---|
 | Running containers | 158 |
 | Published bindings | 116 |
-| Internal-only ports | 62 |
-| Distinct host ports | 115 |
+| Internal-only ports | 61 |
+| Distinct host ports | 116 |
 | Host-port collisions | 0 |
-| Non-loopback bindings | 1 |
-| Firewall (ufw) | inactive |
+| Non-loopback bindings | 0 |
+| Firewall (ufw) | active |
 | Public URL / (HTTP) | 200 |
 
 ## Non-loopback bindings (network-reachable surface)
 
-| Container | Binding | Proto |
-|---|---|---|
-| jarvis-blood-brain-barrier | `0.0.0.0:8016` | tcp |
-
-> **ufw is inactive** — the bindings above are reachable on the local network. Public internet exposure is mediated by the Cloudflare tunnel; host database/service ports are not tunneled (LAN-scoped).
+All published bindings are loopback-only (127.0.0.1).
 
 ## Full canonical port map
 
@@ -43,7 +39,8 @@ Complete published port surface of the live container fleet, verified read-only.
 7474/tcp         -> 127.0.0.1:7475     neo4j
 7687/tcp         -> 127.0.0.1:7687     neo4j
 8001/tcp         -> 127.0.0.1:8001     jarvis-unified-gateway
-8000/tcp         -> 127.0.0.1:8002     125f2e53d146_jarvis-chroma
+8000/tcp         -> 127.0.0.1:8002     jarvis-chroma
+8003/tcp         -> 127.0.0.1:8003     jarvis-rag-server
 8004/tcp         -> 127.0.0.1:8004     jarvis-gis-rag
 8005/tcp         -> 127.0.0.1:8005     jarvis-spiritual-rag
 8006/tcp         -> 127.0.0.1:8006     jarvis-local-resources
@@ -53,8 +50,7 @@ Complete published port surface of the live container fleet, verified read-only.
 8011/tcp         -> 127.0.0.1:8011     jarvis-hippocampus
 8014/tcp         -> 127.0.0.1:8014     jarvis-steward
 8015/tcp         -> 127.0.0.1:8015     jarvis-nbb-i-containers-2
-8016/tcp         -> 0.0.0.0:8016     jarvis-blood-brain-barrier
-8016/tcp         -> :::8016     jarvis-blood-brain-barrier
+8016/tcp         -> 127.0.0.1:8016     jarvis-blood-brain-barrier
 8019/tcp         -> 127.0.0.1:8019     jarvis-psychology-services
 8020/tcp         -> 127.0.0.1:8020     jarvis-consciousness-bridge
 8025/tcp         -> 127.0.0.1:8025     jarvis-toroidal
