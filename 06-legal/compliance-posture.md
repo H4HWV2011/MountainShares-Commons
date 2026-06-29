@@ -16,19 +16,20 @@ Specifications, Terms and Conditions, and DAO Governance Charter — not this pa
 MountainShares is a closed-loop community mutual-credit and prepaid-value program. It is
 deliberately structured so that the regulated activities sit in the right boxes: the
 charitable nonprofit (H4H) sponsors and operates the program but is **not** the money
-transmitter; the community association (DUNA) is the **licensee of record** for money
-services; and the founder's commercial engine (KTS) holds founder-side economics
-entirely outside the charity and outside community credits. Where the law is unsettled —
-most importantly the securities treatment of the earned-credit system — the program
-states that it is under counsel review and **makes no representation either way**, rather
-than self-certifying.
+transmitter; at launch the spendable currency (M$) operates as **closed-loop stored value,
+exempt from money-transmitter licensing under WV Code §32A-2-3(c)**, with the DUNA standing
+as the money-services framework for any later open-loop or cash-out step; and the founder's
+commercial engine (KTS) holds founder-side economics entirely outside the charity and
+outside community credits. Where the law is genuinely unsettled — most importantly the
+securities treatment of the earned-credit system — the program states that it is under
+counsel review and **makes no representation either way**, rather than self-certifying.
 
 ## The four pressure points
 
 | Area | Current posture | Who holds it | Review status |
 |---|---|---|---|
 | **Securities** | EMS and M$ are community instruments, not shares, stock, partnership units, or ownership interests. The program makes **no representation** as to whether EMS or M$ is or is not a security. | DUNA / program | **Under review by securities counsel** |
-| **Money services** | DUNA is the licensee of record: WV Money Transmitter License, FinCEN MSB registration, surety bond, BSA/AML program, cash-out rails. **H4H is not the money transmitter.** | MountainShares DAO/DUNA | Contingent on counsel confirming a license is required and that WV DFI will license the DUNA directly |
+| **Money services** | **At launch: closed-loop stored value, exempt under WV Code §32A-2-3(c)** — M$ redeemable only for goods/services in-network, cash-out disabled by default. Beyond closed-loop, the DUNA is the money-services licensee framework. **H4H is not the money transmitter.** | MountainShares DAO/DUNA | Closed-loop exemption applies at launch; DUNA licensing is the path for any open-loop/cash-out step |
 | **Nonprofit / tax** | H4H is a verified 501(c)(3) public charity operating under IRS rules; the three-box wall keeps founder value out of charitable assets and community credits. | Harmony for Hope, Inc. | IRS status verified; ongoing nonprofit compliance |
 | **Public benefits** | Benefits-Sensitive Account (BSA) safeguards protect participants whose public benefits could be affected by participation. | H4H / DUNA | **Under benefits-counsel review; no Private Letter Ruling obtained** |
 
@@ -41,8 +42,7 @@ promise of profit. EMS and M$ are **not** shares, stock, partnership units, or o
 interests in H4H, the DUNA, KTS, or any other entity, and community EMS holders receive
 no equity, ownership, or profit-participation rights.
 
-The program does **not** assert that EMS or M$ is a non-security. An earlier draft framing
-that self-certified non-security status was removed; the current position is that the
+The program does **not** assert that EMS or M$ is a non-security. The
 **securities-law treatment of EMS, M$, and the phase-based conversion mechanism is under
 review by securities counsel, and the program makes no representation as to whether any of
 them is or is not a security.** Phase-based buying-power schedules are conditional,
@@ -55,16 +55,28 @@ No participant should treat EMS or M$ as a speculative asset or financial invest
 
 ## Money-services posture, in full
 
-The **MountainShares DAO/DUNA — not H4H — is the licensee of record** for money-services
-activities: the WV Money Transmitter License, FinCEN MSB registration, the required surety
-bond, BSA/AML compliance program obligations, and the fiat cash-out rails. All payment
-flows, fund custody, and regulatory money-services obligations run through the DUNA as
-licensee; money-services inquiries go to the DUNA compliance function.
+**At launch, M$ operates as closed-loop stored value under West Virginia gift-card law.**
+West Virginia Code §32A-2-3(c) exempts "the issuance and sale of closed loop stored value
+cards or similar prepaid products which are intended to purchase items only from the issuer
+or seller" from the state money-transmitter article. M$ is structured to fit that
+exemption: it is loaded with USD and **redeemable only for goods and services inside the
+MountainShares network**, not generally accepted outside it and not broadly cashed out.
+Consistent with the closed-loop model, fiat cash-out is **disabled by default** (see the
+benefits-sensitive protections below). The launch posture is therefore a gift-card /
+closed-loop stored-value program, not money transmission.
 
-This structure is **contingent** on counsel confirming that a money-transmitter license is
-required and that the WV Division of Financial Institutions will license the DUNA directly.
-If it will not, a DUNA-controlled licensed entity substitutes for the DUNA in that role.
-This is stated as a contingency, not a settled fact.
+**Beyond closed-loop, the DUNA is the money-services framework.** Any future step that
+would move M$ outside the closed-loop exemption — general acceptance beyond the network,
+broad fiat cash-out, or open-loop transfer — is money transmission under WV Code §32A-2-1,
+and is built to run through the **MountainShares DAO/DUNA as money-services licensee of
+record** (WV Money Transmitter License, FinCEN MSB registration, surety bond, BSA/AML
+program). **H4H is not the money transmitter** in either posture.
+
+Two honest caveats, confirmed with counsel rather than assumed: a multi-merchant community
+network sits near the boundary between "closed-loop" and "semi-closed" stored value, so the
+exemption's application to MountainShares specifically is a counsel determination, not a
+self-judgment; and the federal FinCEN Prepaid Access Rule treats closed-loop products as
+exempt only under per-product load limits, which the program parameters are set to respect.
 
 ## Nonprofit / tax posture
 

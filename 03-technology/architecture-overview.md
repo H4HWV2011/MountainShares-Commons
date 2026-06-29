@@ -17,9 +17,9 @@ treatment, see the thesis in the [work repo](../90-provenance.md).
 > internal prefix `jarvis-` (e.g. `jarvis-chroma`, `jarvis-main-brain`). That prefix is
 > the engine-room namespace, not a second product.
 
-## Two bodies: semantic ⊗ spatial
+## Three bodies: semantic ⊗ spatial ⊗ temporal
 
-The system is organized around two coupled "Hilbert bodies":
+The system is organized around three coupled "Hilbert bodies":
 
 - **H_App — the semantic body.** A vector store (**ChromaDB**) holding the system's
   knowledge as embeddings: documents, beliefs, conversation memory, domain corpora.
@@ -27,14 +27,19 @@ The system is organized around two coupled "Hilbert bodies":
 - **H_geo — the spatial body.** A geospatial database (**PostgreSQL / PostGIS**) holding
   West Virginia's parcels, addresses, census geometry, building footprints, and the
   GBIM belief geometry. This is *where things are*.
+- **H_time — the temporal body.** A temporal layer that situates knowledge in time:
+  *when* a belief held, how it has changed, and how confidence evolves. This is *when
+  things are*, and it makes time a first-class coordinate alongside meaning and place
+  rather than a buried timestamp.
 
-The two are joined by a **tensor-product bridge** (written **H_App ⊗ H_geo**): a query
-is resolved through a semantic arm and a spatial arm at once, so an answer about, say,
-flood risk or food assistance is grounded both in what the corpus says and in the actual
-geography of the place being asked about. A dispatcher service routes queries across both
-arms and combines the result. The practical effect: when someone asks "what can I do for
-my community in Fayette County?", the answer names real places and real resources, not
-generic civic advice.
+The three are joined by a **tensor-product bridge** (written **H_App ⊗ H_geo ⊗ H_time**):
+a query is resolved through a semantic arm, a spatial arm, and a temporal arm at once, so
+an answer about, say, flood risk or food assistance is grounded in what the corpus says,
+in the actual geography of the place being asked about, and in the time the question
+concerns. A dispatcher service routes queries across the arms and combines the result. The
+practical effect: when someone asks "what can I do for my community in Fayette County?",
+the answer names real places and real resources, grounded in the present state of the
+world rather than a stale snapshot.
 
 ## GBIM — knowledge bound to place and time
 
