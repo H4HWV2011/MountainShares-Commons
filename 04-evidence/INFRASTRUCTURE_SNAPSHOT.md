@@ -1,5 +1,7 @@
 # Infrastructure Snapshot — Verified Live System
 
+> **STATUS UPDATE (2026-06-29T03:40:57Z):** All remediation items in section 5 are **CLOSED**. The ChromaDB live store now serves the full corpus (**16,871,675 vectors**, matched to backup), all container bindings are loopback-only (**0 non-loopback**), and the host firewall is **active (ufw)**. Sections below that describe the pre-remediation state (live shell store, BBB exposure, ufw inactive) are retained only as historical record of the 2026-06-28 audit; the live truth is in the generated pages `../03-technology/data-stores.md` and `port-map.md`, regenerated from `facts.json`.
+
 **System:** Ms. Allis (internal: Jarvis) — Harmony for Hope, Inc. / Kidd's Technical Services
 **Host:** cakidd-Legion-5-16IRX9 (Lenovo Legion 5)
 **Snapshot date:** 2026-06-28
@@ -100,7 +102,9 @@ These are gaps between the published thesis/docs and the live system. The presen
 
 ---
 
-## 5. Open items / remediation backlog (decisions pending — owner: Carrie / Perplexity)
+## 5. Remediation backlog — ALL CLOSED (verified 2026-06-29T03:40:57Z)
+
+_Every item below was resolved and verified via the evidence pipeline. Retained as record._
 
 Listed for the record. None are actions taken in this audit; all are read-only findings. Sequencing and execution are the owners' call.
 
