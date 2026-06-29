@@ -1,6 +1,6 @@
 # Port Map
 
-> **GENERATED FILE — do not hand-edit.** Rendered from `../04-evidence/facts.json` (snapshot `2026-06-29T03:40:57Z`). To update, re-run the evidence pipeline:
+> **GENERATED FILE — do not hand-edit.** Rendered from `../04-evidence/facts.json` (snapshot `2026-06-29T03:53:45Z`). To update, re-run the evidence pipeline:
 > `PGPASSWORD=… ./04-evidence/scripts/update_evidence.sh` (add `--full` to recount the backup corpus).
 
 

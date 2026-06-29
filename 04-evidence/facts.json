@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-06-29T03:40:57Z",
+  "snapshot_utc": "2026-06-29T03:53:45Z",
   "host": "cakidd-Legion-5-16IRX9",
   "generator": "collect_evidence.py",
   "containers": {
@@ -18,7 +18,7 @@
   "chroma": {
     "live": {
       "collections": 125,
-      "vectors": 16871675,
+      "vectors": 16871677,
       "store_path": "/mnt/nvme1/msjarvis-data/chroma-live-bk-20260623-0834",
       "status": "ok"
     },
@@ -26,8 +26,8 @@
       "path": "/mnt/nvme1/msjarvis-data/chroma-live-bk-20260623-0834/chroma.sqlite3",
       "size_bytes": 103582765056,
       "collections": 125,
-      "vectors": 16871675,
-      "vectors_verified_at": "2026-06-29T03:40:57Z",
+      "vectors": 16871677,
+      "vectors_verified_at": "2026-06-29T03:53:45Z",
       "migrations": {
         "embeddings_queue": 2,
         "metadb": 6,
@@ -94,6 +94,14 @@
         ]
       }
     ]
+  },
+  "hilbert_time": {
+    "service": "jarvis-hilbert-time",
+    "store": "Redis",
+    "redis_port": 6380,
+    "timelines": 4,
+    "events": 35,
+    "status": "ok"
   },
   "firewall": {
     "ufw": "active"

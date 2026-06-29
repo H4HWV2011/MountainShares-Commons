@@ -27,19 +27,23 @@ The system is organized around three coupled "Hilbert bodies":
 - **H_geo — the spatial body.** A geospatial database (**PostgreSQL / PostGIS**) holding
   West Virginia's parcels, addresses, census geometry, building footprints, and the
   GBIM belief geometry. This is *where things are*.
-- **H_time — the temporal body.** A temporal layer that situates knowledge in time:
-  *when* a belief held, how it has changed, and how confidence evolves. This is *when
-  things are*, and it makes time a first-class coordinate alongside meaning and place
-  rather than a buried timestamp.
+- **H_t — the temporal body.** A Redis-backed timeline service (`jarvis-hilbert-time`)
+  that records *when* every belief, ingest, and query happened, as ordered, decay-weighted
+  events — one timeline per entity. Each event carries a **half-life recency weight**, and
+  that weight feeds directly into retrieval, so the system can favor the freshest evidence
+  on an active question without discarding older material. This is *when things are*, made
+  a first-class coordinate rather than a buried timestamp.
 
-The three are joined by a **tensor-product bridge** (written **H_App ⊗ H_geo ⊗ H_time**):
+The three are joined by a **tensor-product bridge** (written **H_App ⊗ H_geo ⊗ H_t**):
 a query is resolved through a semantic arm, a spatial arm, and a temporal arm at once, so
 an answer about, say, flood risk or food assistance is grounded in what the corpus says,
 in the actual geography of the place being asked about, and in the time the question
-concerns. A dispatcher service routes queries across the arms and combines the result. The
-practical effect: when someone asks "what can I do for my community in Fayette County?",
-the answer names real places and real resources, grounded in the present state of the
-world rather than a stale snapshot.
+concerns — with more recently ingested evidence weighted higher. A dispatcher routes
+queries across the arms and combines the result, and a state-machine service
+(`jarvis-hilbert-state`) coordinates writes across all three. The practical effect: when
+someone asks "what can I do for my community in Fayette County?", the answer names real
+places and real resources, grounded in the present state of the world rather than a stale
+snapshot.
 
 ## GBIM — knowledge bound to place and time
 

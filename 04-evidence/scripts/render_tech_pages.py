@@ -57,9 +57,10 @@ def render_data_stores():
     L.append("")
     L.append(GEN_NOTE)
     L.append("")
-    L.append("Ms. Allis pairs a semantic store (H_App) with a spatial store (H_geo): "
-             "**H_App \u2297 H_geo = ChromaDB \u2297 PostGIS**. This page reports the *live* state "
-             "of both, verified read-only on the snapshot date.")
+    L.append("Ms. Allis runs a three-body memory: a semantic store (H_App / ChromaDB), a "
+             "spatial store (H_geo / PostGIS), and a temporal body (H_t / Redis) \u2014 "
+             "**H_App \u2297 H_geo \u2297 H_t**. This page reports the *live* state of all three, "
+             "verified read-only on the snapshot date.")
     L.append("")
     # Chroma
     L.append("## H_App \u2014 ChromaDB (semantic / vector)")
@@ -112,6 +113,22 @@ def render_data_stores():
                          ". Row counts are live `count(*)` values; planner statistics may read 0 if tables "
                          "were bulk-loaded without `ANALYZE`.")
                 L.append("")
+    ht = F.get("hilbert_time") or {}
+    L.append("## H_t \u2014 temporal body (Redis)")
+    L.append("")
+    if ht and str(ht.get("status", "")).startswith("ok"):
+        L.append("| Service | Store | Timelines | Events |")
+        L.append("|---|---|---|---|")
+        L.append("| `%s` | Redis | %s | %s |" % (
+            ht.get("service", "jarvis-hilbert-time"), ht.get("timelines", "\u2014"),
+            commas(ht.get("events")) if isinstance(ht.get("events"), int) else ht.get("events", "\u2014")))
+        L.append("")
+        L.append("The temporal body records *when* every ingest and query occurred as ordered, "
+                 "decay-weighted timelines (Redis sorted sets), feeding a half-life recency weight "
+                 "into retrieval scoring. It holds no embeddings.")
+    else:
+        L.append("_Temporal body status: %s_" % ht.get("status", "unavailable"))
+    L.append("")
     L.append("---")
     L.append("*Source: `../04-evidence/facts.json`. Regenerate; do not edit by hand.*")
     return "\n".join(L) + "\n"

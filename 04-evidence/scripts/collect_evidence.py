@@ -268,6 +268,30 @@ def collect_postgres():
 
 facts["postgres"] = collect_postgres()
 
+# ---- hilbert-time (H_t / temporal body, Redis-backed) ----------------------
+def collect_hilbert_time():
+    res = {"service": "jarvis-hilbert-time", "store": "Redis", "redis_port": 6380,
+           "timelines": None, "events": None, "status": "ok"}
+    rc, keys, _ = run(["bash", "-lc",
+        "docker exec jarvis-redis redis-cli --scan --pattern 'hilbert:time:*'"])
+    if rc != 0:
+        res["status"] = "unavailable (jarvis-redis not reachable)"; return res
+    klist = [k for k in keys.splitlines() if k.strip()]
+    res["timelines"] = len(klist)
+    total = 0; partial = False
+    for k in klist:
+        rc2, z, _ = run(["bash", "-lc", "docker exec jarvis-redis redis-cli ZCARD '%s'" % k])
+        if rc2 == 0 and z.strip().isdigit():
+            total += int(z.strip())
+        else:
+            partial = True
+    res["events"] = total
+    if partial:
+        res["status"] = "ok (partial: some ZCARD reads failed)"
+    return res
+
+facts["hilbert_time"] = collect_hilbert_time()
+
 # ---- firewall + public -----------------------------------------------------
 def collect_firewall():
     rc, out, _ = run(["bash", "-lc", "ufw status 2>/dev/null | head -1"])
@@ -298,5 +322,6 @@ print("  chroma.live.vectors    :", facts["chroma"]["live"].get("vectors"))
 print("  chroma.backup.vectors  :", facts["chroma"]["backup"].get("vectors"),
       "(" + str(facts["chroma"]["backup"].get("status")) + ")")
 print("  postgres.instances     :", len(facts["postgres"]["instances"]))
+print("  hilbert_time.timelines :", facts["hilbert_time"].get("timelines"), "events", facts["hilbert_time"].get("events"))
 print("  firewall.ufw           :", facts["firewall"].get("ufw"))
 print("Port artifacts captured in", LATEST)
